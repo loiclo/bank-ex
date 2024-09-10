@@ -1,62 +1,32 @@
 class Bank:
-    def __init__(self,name, street, number, zip_code, city ):
+    def __init__(self, name):
         self.name = name
-        self.street = street
-        self.number = number
-        self.zip_code = zip_code
-        self.city = city
-        self.userlist = []
-        
-    def add_customer(self, customer):
-        self.userlist.append(customer)
-        
+        self.clients = []
+        self.accounts = []
+    def add_client(self, client):
+        self.clients.append(client)
+    def add_account(self, account):
+        self.accounts.append(account)
 
-        
-class Account:
-    
-            
-        
-bank1 = Bank("ING", "street", "number", "zip_code", "city")
-
-
-class Customer:
-    def __init__(self,name, age, birth, street, number, zip_code, city, bank ):
+class User:
+    def __init__(self, name, bank):
         self.name = name
-        self.age = age
-        self.birth = birth
-        self.street = street
-        self.number = number
-        self.zip_code = zip_code
-        self.city = city
         self.bank = bank
-        self.userlist = []
-        bank.add_customer(self)
-        
-        
-        
-    def create_current_account(self, solde, opening_date, interest ):
-    # customer et bank -> self.customer & self.bank ? ? ? 
-    
-    # self.add_customer ?  ? ? 
+        self.bank.add_client(self)
+        self.comptes = []
+    def add_new_account(somme = 0):
+        #ligne qui va creer un nouveau compte
+        #ligne qui va ajouter ce compte a mon user
+        #ligne qui va ajouter ce compte a la banque
+        return account
 
-    
-    
-    
+class Account:
+    def __init__(self):
+        print("coucou")
 
-def create_saving_account(self, customer, bank, solde, opening_date, interest ):        
-    
-    
-    self.sole = solde
-    self.opening_date = opening_date
-    self.interest = interest
-        
-        
-        
-        
-customer1 = Customer("Loic", "34", "13 mars", "jhjhjh", "number", "zip_code", "city", bank1 )
+banque1 = Bank("BNP")
+print("coucou")
+client1 = User("Lucie", banque1)
 
-# class Account
-
-
-
-#cr
+print("coucou")
+compte_de_lucie = client1.add_new_account(45)
